@@ -105,7 +105,6 @@ public class ProductServiceImpl implements IProductService {
         productDetailVo.setStatus(product.getStatus());
         productDetailVo.setStock(product.getStock());
 
-        // TODO: ftp图片服务器 7-3
         productDetailVo.setImageHost(PropertiesUtil.getProperty("ftp.server.http.prefix", "http://img.simple.com/"));
 
         Category category = categoryMapper.selectByPrimaryKey(product.getCategoryId());
